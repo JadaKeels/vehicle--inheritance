@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public class Car extends Vehicle {
-
+    // Only a car has this, so it lives here and not in Vehicle
     private int numberOfDoors;
 
     public int getNumberOfDoors() {
@@ -12,12 +12,12 @@ public class Car extends Vehicle {
         this.numberOfDoors = numberOfDoors;
     }
 
+    // Actions only a car has
     public void openTrunk() {
-        System.out.println("Trunk opened");
+        System.out.println("Trunk opened.");
     }
 
     public void closeTrunk() {
-        System.out.println("Trunk closed");
+        System.out.println("Trunk closed.");
     }
 }
-

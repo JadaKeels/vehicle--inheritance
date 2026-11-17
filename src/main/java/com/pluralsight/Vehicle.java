@@ -1,13 +1,30 @@
 package com.pluralsight;
 
 public class Vehicle {
-
+    // Backing variables:
     private String color;
+    private int topSpeed;
+    private int fuelCapacity;
     private int numberOfPassengers;
     private int cargoCapacity;
-    private int fuelCapacity;
 
-    //Gettors and Setters
+    //Constructor
+    public Vehicle(String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity) {
+        this.color = color;
+        this.topSpeed = topSpeed;
+        this.fuelCapacity = fuelCapacity;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+    }
+
+    // Getters and setters:
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
 
     public String getColor() {
         return color;
@@ -15,6 +32,22 @@ public class Vehicle {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getTopSpeed() {
+        return topSpeed;
+    }
+
+    public void setTopSpeed(int topSpeed) {
+        this.topSpeed = topSpeed;
+    }
+
+    public int getFuelCapacity() {
+        return fuelCapacity;
+    }
+
+    public void setFuelCapacity(int fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
     }
 
     public int getNumberOfPassengers() {
@@ -33,32 +66,21 @@ public class Vehicle {
         this.cargoCapacity = cargoCapacity;
     }
 
-    public int getFuelCapacity() {
-        return fuelCapacity;
+    // Actions every vehicle can do. They are inherited too
+    public void startEngine() {
+        System.out.println("Engine started.");
     }
 
-    public void setFuelCapacity(int fuelCapacity) {
-        this.fuelCapacity = fuelCapacity;
+    public void stopEngine() {
+        System.out.println("Engine stopped.");
     }
 
-    //Methods
-public void startEngine() {
+    public void accelerate() {
+        System.out.println("Vehicle accelerated.");
+    }
 
-    System.out.println("Engine started");
+    public void brake() {
+        System.out.println("Brakes applied.");
+    }
+
 }
-
-public void stopEngine() {
-
-    System.out.println("Engine stopped");
-}
-
-public void accelerate() {
-
-System.out.println("Vehicle accelerating");
-}
-
-public void brake() {
-
-    System.out.println("Vehicle braking");
-}
-      }
