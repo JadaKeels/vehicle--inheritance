@@ -3,19 +3,19 @@ package com.pluralsight;
 public class Main {
     public static void main(String[] args) {
 
-        Moped slowRide = new Moped();
+        Moped slowRide = new Moped("Red", 1, 0, 5);
         slowRide.setColor("Red");           // inherited from Vehicle
         slowRide.setFuelCapacity(5);        // inherited from Vehicle
 
-        SemiTruck semiTruck = new SemiTruck();
+        SemiTruck semiTruck = new SemiTruck( "Black", 70, 300 2,2);
         semiTruck.setNumberOfTrailers(2);   // SemiTruck's own setter
         semiTruck.setFuelCapacity(100);     // inherited from Vehicle
 
-        Hovercraft hovercraft = new Hovercraft();
+        Hovercraft hovercraft = new Hovercraft("Blue", 200, 80, 2);
         hovercraft.setAirCushionPressure(50);   // Hovercraft's own setter
         hovercraft.setColor("Blue");            // inherited from Vehicle
 
-        Car car = new Car();
+        Car car = new Car("Silver", 200, 300, 4);
         car.setNumberOfDoors(4);            // Car's own setter
         car.setTopSpeed(200);               // inherited from Vehicle
 
