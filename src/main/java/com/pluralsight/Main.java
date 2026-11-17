@@ -7,7 +7,7 @@ public class Main {
         slowRide.setColor("Red");           // inherited from Vehicle
         slowRide.setFuelCapacity(5);        // inherited from Vehicle
 
-        SemiTruck semiTruck = new SemiTruck( "Black", 70, 300 2,2);
+        SemiTruck semiTruck = new SemiTruck( "Black", 70, 300, 2,2);
         semiTruck.setNumberOfTrailers(2);   // SemiTruck's own setter
         semiTruck.setFuelCapacity(100);     // inherited from Vehicle
 
