@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-public class SemiTruck extends Vehicle {
-
     public SemiTruck(String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity, int numberOfTrailers) {
         super(color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
         this.numberOfTrailers = numberOfTrailers;

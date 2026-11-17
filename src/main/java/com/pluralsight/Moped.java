@@ -2,14 +2,17 @@ package com.pluralsight;
 
 public class Moped extends Vehicle {
 
-    public Moped(String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity, int maxWeight) {
-        super(color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
-    }
-}
-
-    // Only a moped has this, so it lives here and not in Vehicle
+    // Only a moped has this, so it belongs in Moped
     private int maxWeight;
 
+    public Moped(String color,
+                 int topSpeed,
+                 int fuelCapacity,
+                 int numberOfPassengers,
+                 int cargoCapacity,
+                 int maxWeight) {
+
+        super(color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
         this.maxWeight = maxWeight;
     }
 
@@ -26,7 +29,6 @@ public class Moped extends Vehicle {
         System.out.println("Riding the moped.");
     }
 
-    // Every class in Java inherits a toString() from the Object class
     @Override
     public String toString() {
         return "Moped{" +
