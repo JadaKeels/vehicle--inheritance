@@ -1,12 +1,17 @@
 package com.pluralsight;
 
-    public SemiTruck(String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity, int numberOfTrailers) {
-        super(color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
-        this.numberOfTrailers = numberOfTrailers;
-    }
+public class SemiTruck extends Truck {
 
     // Only a semi truck has this, so it lives here and not in Vehicle
     private int numberOfTrailers;
+
+    public SemiTruck(String color, int topSpeed, int fuelCapacity,
+                     int numberOfPassengers, int cargoCapacity,
+                     int numberOfTrailers) {
+
+        super(color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
+        this.numberOfTrailers = numberOfTrailers;
+    }
 
     public int getNumberOfTrailers() {
         return numberOfTrailers;
