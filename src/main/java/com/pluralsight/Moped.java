@@ -1,8 +1,17 @@
 package com.pluralsight;
 
 public class Moped extends Vehicle {
+
+    public Moped(String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity, int maxWeight) {
+        super(color, topSpeed, fuelCapacity, numberOfPassengers, cargoCapacity);
+    }
+}
+
     // Only a moped has this, so it lives here and not in Vehicle
     private int maxWeight;
+
+        this.maxWeight = maxWeight;
+    }
 
     public int getMaxWeight() {
         return maxWeight;
