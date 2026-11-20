@@ -1,29 +1,20 @@
 package com.pluralsight;
 
 public class Vehicle {
-    // Backing variables:
+
     private String color;
     private int topSpeed;
     private int fuelCapacity;
     private int numberOfPassengers;
     private int cargoCapacity;
 
-    //Constructor
-    public Vehicle(String color, int topSpeed, int fuelCapacity, int numberOfPassengers, int cargoCapacity) {
+    public Vehicle(String color, int topSpeed, int fuelCapacity,
+                   int numberOfPassengers, int cargoCapacity) {
         this.color = color;
         this.topSpeed = topSpeed;
         this.fuelCapacity = fuelCapacity;
         this.numberOfPassengers = numberOfPassengers;
         this.cargoCapacity = cargoCapacity;
-    }
-
-    // Getters and setters:
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public String getColor() {
@@ -66,7 +57,6 @@ public class Vehicle {
         this.cargoCapacity = cargoCapacity;
     }
 
-    // Actions every vehicle can do. They are inherited too
     public void startEngine() {
         System.out.println("Engine started.");
     }
@@ -82,5 +72,4 @@ public class Vehicle {
     public void brake() {
         System.out.println("Brakes applied.");
     }
-
 }
